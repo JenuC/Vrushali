@@ -1,0 +1,29 @@
+# Generated output — regenerate with the macro or the Python script.
+# The copies under examples/ are committed on purpose and are re-included below.
+TileConfiguration.txt
+TileConfiguration.registered.txt
+tiles.csv
+!examples/*/TileConfiguration.txt
+!examples/*/tiles.csv
+
+# Microscope data — indexes under examples/ are committed, pixel data never is.
+*.tif
+*.tiff
+*.index
+!examples/*/NDTiff.index
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

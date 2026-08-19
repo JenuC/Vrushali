@@ -1,0 +1,25 @@
+{
+  "_comment": "Single source of truth for the example fixtures. tests/test_examples.py regenerates each example with these arguments and diffs the result against the committed files, so the examples can never silently drift from the code.",
+  "examples": [
+    {
+      "dir": "full-grid",
+      "description": "Complete 38 x 21 serpentine grid, 798 tiles, split across two NDTiff data files.",
+      "args": ["--overlap", "10", "--digits", "4", "--start", "0"],
+      "tiles": 798,
+      "columns": [0, 37],
+      "rows": [0, 20],
+      "tile_size": [2048, 2048],
+      "mosaic": [70246, 38912]
+    },
+    {
+      "dir": "sparse-roi",
+      "description": "Sparse ROI: 113 of 252 grid slots filled, serpentine with ragged row ranges.",
+      "args": ["--overlap", "10", "--digits", "4", "--start", "0"],
+      "tiles": 113,
+      "columns": [0, 13],
+      "rows": [0, 17],
+      "tile_size": [2048, 2048],
+      "mosaic": [26010, 33382]
+    }
+  ]
+}

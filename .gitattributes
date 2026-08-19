@@ -1,0 +1,18 @@
+# The generators write LF unconditionally, and the tests diff regenerated output
+# against the committed examples. Without this, a Windows checkout would convert
+# the committed copies to CRLF and the two would no longer match on disk.
+* text=auto eol=lf
+
+# Never touch these.
+*.index binary
+*.tif   binary
+*.tiff  binary
+
+# Keep generated output out of PR diffs by default; `git diff -- examples/` still works.
+examples/**/TileConfiguration.txt linguist-generated=true
+examples/**/tiles.csv             linguist-generated=true
+
+# Report the repo as ImageJ Macro rather than "mostly Python".
+*.ijm linguist-language=ImageJ-Macro
+docs/**   linguist-documentation=true
+tests/**  linguist-detectable=false
